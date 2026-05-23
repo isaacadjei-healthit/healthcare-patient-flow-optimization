@@ -1,0 +1,7 @@
+docker pull mcr.microsoft.com/mssql/server:2019-latest
+
+docker run -e "ACCEPT_EULA=Y" \
+-e "MSSQL_SA_PASSWORD=YourStrongPassword123!" \
+-p 1401:1433 \
+--name healthcare-sql \
+-d mcr.microsoft.com/mssql/server:2019-latest
